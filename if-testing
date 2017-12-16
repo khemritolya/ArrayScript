@@ -1,0 +1,19 @@
+MACHINE 1024
+
+# A simple if demonstration program
+
+WRITE 0 8
+GOTO READ 0
+
+# This is the beginning of one "if" branch
+WRITE 2 EXEC 5
+GOTO 16
+
+# This is the beginning of another "if" branch
+WRITE 2 10
+GOTO 16
+
+# the program resumes here
+PRINT READ 2
+
+PRINT ADD ADD 1 2 ADD 3 4
