@@ -1,0 +1,35 @@
+MACHINE 1024
+
+# ------ data --------
+# 100 -> loop counter (initialized to zero)
+# 101 -> line to jump to
+# 102 -> input: n in "nth fibonacci number"
+# 103 -> fibonacci a (initialized to one)
+# 104 -> fibonacci b (initialized to zero)
+# 105 -> temp. value
+# 106 -> start of loop (initialized to 21
+# 107 -> end of loop (initialized  35)
+# --------------------
+
+# initialize
+WRITE 102 13
+WRITE 104 1
+WRITE 106 21
+WRITE 107 35
+
+# store `b` in `temp`
+WRITE 105 READ 104
+# store the sum in `b`
+WRITE 104 ADD READ 103 READ 104
+# store temp in `a`
+WRITE 103 READ 105
+
+# increment counter
+WRITE 100 ADD READ 100 1
+# calculate next line: if counter == n then counter / n == 1 and 106 + 1 = 107, which gets us to the end of the loop. If counter is less, we get to 106.
+WRITE 101 READ ADD 106 DIV READ 100 READ 102
+# jump to that line
+GOTO READ 101
+
+# print the answer
+PRINT READ 104
