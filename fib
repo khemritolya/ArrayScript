@@ -1,5 +1,5 @@
 MACHINE 1024
-
+# Code kindly provided by James Sours
 # ------ data --------
 # 100 -> loop counter (initialized to zero)
 # 101 -> line to jump to
@@ -7,7 +7,7 @@ MACHINE 1024
 # 103 -> fibonacci a (initialized to one)
 # 104 -> fibonacci b (initialized to zero)
 # 105 -> temp. value
-# 106 -> start of loop (initialized to 21
+# 106 -> start of loop (initialized to 21)
 # 107 -> end of loop (initialized  35)
 # --------------------
 

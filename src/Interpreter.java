@@ -22,7 +22,7 @@ public class Interpreter {
 
         try {
             System.out.println("ARRAYSCRIPT VERSION: " + VERSION_CODE);
-            System.out.println("AUTHOR: " + AUTHOR);
+            System.out.println("ARRAYSCRIPT AUTHOR: " + AUTHOR);
             System.out.println("PROGRAM OUTPUT FOR: " + file.getName());
 
             printLine();
